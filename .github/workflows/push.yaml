@@ -12,7 +12,7 @@ jobs:
           cache: 'pip'
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
-          file_pattern: *.html
+          file_pattern: '*.html'
       - name: Install dependencies
         run: pip install -r requirements.txt
         shell: bash
