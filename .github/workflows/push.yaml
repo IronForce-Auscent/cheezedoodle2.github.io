@@ -1,0 +1,13 @@
+name: build
+run-name: build html templates
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+        shell: bash
+      - name: Build html templates
+        run: python build.py
+        shell: bash
